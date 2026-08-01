@@ -1,0 +1,50 @@
+# Runtime secrets and state
+secrets.env
+*.pid
+*.log
+tunnel-url.txt
+*.snapshot
+*.snapshot.sha256
+
+# Dependencies
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Test/cache output
+.pytest_cache/
+.coverage
+coverage/
+temp
+
+.qdrant-base
+
+# Generated project/runtime markers
+.qdrant-initialized
+
+# Generated benchmark reports/results if explicitly copied into the source tree
+benchmarks/benchmark-*.json
+benchmarks/benchmark-report.json
+benchmarks/benchmark-report.md
+qdrant-benchmarks-*.zip
+qdrant-benchmarks-*.zip.sha256
+profile-ab-*.zip
+profile-ab-*.zip.sha256
+
+.qdrant-native-portable-instance
+
+temp/
+

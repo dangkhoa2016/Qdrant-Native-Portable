@@ -1,0 +1,10 @@
+# The Docker build context is the project root. Keep it intentionally tiny.
+**
+!docker/
+!docker/Dockerfile
+!docker/entrypoint.sh
+!docker/healthcheck.sh
+!docker/persistence.sh
+!deploy/
+!deploy/beam/
+!deploy/beam/entrypoint.sh

@@ -1,0 +1,15 @@
+# Beam sync hygiene. Keep source/deploy files; exclude local runtime and evidence artifacts.
+temp/
+*.log
+__pycache__/
+*.py[cod]
+.qdrant-base
+.qdrant-initialized
+runtime.env
+secrets.env
+*.zip
+*.zip.sha256
+*.snapshot
+*.snapshot.sha256
+.venv/
+node_modules/
