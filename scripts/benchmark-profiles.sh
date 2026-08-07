@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 PROJECT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+overall_rc=0
 
 profiles_csv="low-memory,balanced-lite,balanced-memory"
 order="listed"
@@ -193,13 +194,18 @@ META
   if (( benchmark_rc != 0 )); then
     printf 'benchmark_exit_code=%s\n' "$benchmark_rc" >> "$run_dir/run-metadata.txt"
     warn "Profile benchmark failed: cycle=$cycle profile=$profile exit=$benchmark_rc"
+    overall_rc=1
   fi
 done < <(emit_plan | tr '\n' '\n')
 
+compare_rc=0
 python3 "$PROJECT_DIR/benchmarks/profile_compare.py" \
   --root "$ab_root/runs" \
   --json-output "$ab_root/profile-comparison.json" \
-  --markdown-output "$ab_root/profile-comparison.md"
+  --markdown-output "$ab_root/profile-comparison.md" || compare_rc=$?
+if (( compare_rc != 0 )); then
+  warn "profile_compare.py failed with exit code $compare_rc"
+fi
 
 archive="$export_root/$(basename "$ab_root").zip"
 rm -f "$archive" "$archive.sha256"
@@ -219,4 +225,7 @@ PY
 fi
 command -v sha256sum >/dev/null 2>&1 && sha256sum "$archive" > "$archive.sha256"
 ok "Profile A/B complete: $archive"
+if (( compare_rc != 0 )); then
+  overall_rc=1
+fi
 exit "$overall_rc"
