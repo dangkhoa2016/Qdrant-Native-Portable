@@ -1,0 +1,14 @@
+{
+  "name": "qdrant-native-portable-node-example",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Node.js example for Qdrant Native Portable",
+  "license": "MIT",
+  "scripts": {
+    "start": "node client.js",
+    "check": "node --check client.js"
+  },
+  "dependencies": {
+    "@qdrant/js-client-rest": "^1.18.0"
+  }
+}
