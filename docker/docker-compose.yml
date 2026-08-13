@@ -1,0 +1,37 @@
+services:
+  qdrant:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    restart: unless-stopped
+    environment:
+      QDRANT_API_KEY: ${QDRANT_API_KEY:?set QDRANT_API_KEY}
+      QDRANT_READ_ONLY_API_KEY: ${QDRANT_READ_ONLY_API_KEY:?set QDRANT_READ_ONLY_API_KEY}
+      QNP_ENV: production
+      QNP_RUNTIME: docker
+      QNP_TOPOLOGY: single
+      QNP_STORAGE_MODE: ${QNP_STORAGE_MODE:-local}
+      QNP_PERSIST_PATH: ${QNP_PERSIST_PATH:-/qdrant-persist}
+      QNP_REQUIRE_PERSIST_MOUNT: ${QNP_REQUIRE_PERSIST_MOUNT:-0}
+      QNP_AUTO_RESTORE: ${QNP_AUTO_RESTORE:-1}
+      QNP_AUTO_SNAPSHOT_INTERVAL_SECONDS: ${QNP_AUTO_SNAPSHOT_INTERVAL_SECONDS:-0}
+      QNP_AUTO_SNAPSHOT_ON_SHUTDOWN: ${QNP_AUTO_SNAPSHOT_ON_SHUTDOWN:-1}
+      QNP_SHUTDOWN_SNAPSHOT_TIMEOUT_SECONDS: ${QNP_SHUTDOWN_SNAPSHOT_TIMEOUT_SECONDS:-20}
+      QNP_SNAPSHOT_RETENTION: ${QNP_SNAPSHOT_RETENTION:-3}
+      QNP_ALLOW_UNSUPPORTED_STORAGE: ${QNP_ALLOW_UNSUPPORTED_STORAGE:-0}
+    ports:
+      - "127.0.0.1:6333:6333"
+    volumes:
+      - qdrant-data:/qdrant/storage
+      - qdrant-snapshots:/qdrant/snapshots
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  qdrant-data:
+  qdrant-snapshots:

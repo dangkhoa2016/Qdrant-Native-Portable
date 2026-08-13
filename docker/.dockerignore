@@ -1,0 +1,8 @@
+*.zip
+*.sha256
+.git
+.qdrant-base
+secrets.env
+runtime.env
+__pycache__/
+*.pyc
