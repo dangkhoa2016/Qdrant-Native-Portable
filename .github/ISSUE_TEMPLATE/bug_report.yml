@@ -1,0 +1,74 @@
+name: Bug report
+description: Report a reproducible problem in a documented Qdrant Native Portable workflow.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: Remove or sanitize API keys, JWTs, provider credentials, private URLs, private snapshots, token files, and other sensitive runtime information before submitting.
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true
+        - label: I removed or sanitized sensitive information.
+          required: true
+  - type: input
+    id: version
+    attributes:
+      label: Project version or commit
+      placeholder: v1.0.0 or full/short commit SHA
+    validations:
+      required: true
+  - type: input
+    id: qdrant_version
+    attributes:
+      label: Qdrant version
+      placeholder: 1.18.3
+    validations:
+      required: true
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: Runtime
+      options: [Native, Docker, Provider adapter, Benchmark/tooling, Documentation/release tooling, Other]
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options: [Google Colab, Kaggle Notebook, GitHub Codespaces, CodeSandbox-like Linux VM, Generic Linux/VPS, Generic Docker host, Hugging Face Spaces, Modal.com, Beam.cloud, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and effective configuration
+      description: Include OS/image, CPU/RAM, profile, process/deployment mode, persistence mode, and other relevant non-secret settings.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs or diagnostics
+      render: shell

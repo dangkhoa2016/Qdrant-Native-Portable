@@ -1,5 +1,9 @@
 # Qdrant Native Portable
 
+[![CI](https://github.com/dangkhoa2016/Qdrant-Native-Portable/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/dangkhoa2016/Qdrant-Native-Portable/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/dangkhoa2016/Qdrant-Native-Portable?display_name=tag&sort=semver)](https://github.com/dangkhoa2016/Qdrant-Native-Portable/releases/latest)
+[![License: MIT](https://img.shields.io/github/license/dangkhoa2016/Qdrant-Native-Portable)](LICENSE)
+
 > 🌐 Language / Ngôn ngữ: **English** | [Tiếng Việt](README.vi.md)
 
 A security-conscious, **native-first and Docker-capable Qdrant runtime toolkit** for learning, development, RAG demos, integration tests, and production-oriented single-node deployments. Native mode targets Google Colab, Kaggle, GitHub Codespaces, CodeSandbox-like Linux VMs, and generic Linux hosts; the Docker runtime adds provider adapters for Hugging Face Spaces, Modal, and Beam.
@@ -456,6 +460,16 @@ bash qdrant.sh security-check
 ```
 
 GitHub Actions is the intended authoritative environment for ShellCheck in the public repository; local environments may not have the `shellcheck` binary installed.
+
+## Community, support, and security
+
+- Read [CONTRIBUTING.md](CONTRIBUTING.md) before proposing code or documentation changes.
+- Use the structured GitHub issue forms for reproducible bugs, focused feature requests, and usage questions.
+- See the [support guide](.github/SUPPORT.md) for support scope and the diagnostic information to provide.
+- Report suspected vulnerabilities through [SECURITY.md](SECURITY.md), never through a public issue.
+- Participation in project spaces is governed by the [Code of Conduct](.github/CODE_OF_CONDUCT.md).
+
+Repository ownership for critical areas is declared in [`.github/CODEOWNERS`](.github/CODEOWNERS). Automated dependency maintenance is intentionally limited to GitHub Actions so Qdrant/client baseline changes continue to require explicit compatibility validation.
 
 ## License
 

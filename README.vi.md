@@ -1,5 +1,9 @@
 # Qdrant Native Portable
 
+[![CI](https://github.com/dangkhoa2016/Qdrant-Native-Portable/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/dangkhoa2016/Qdrant-Native-Portable/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/dangkhoa2016/Qdrant-Native-Portable?display_name=tag&sort=semver)](https://github.com/dangkhoa2016/Qdrant-Native-Portable/releases/latest)
+[![License: MIT](https://img.shields.io/github/license/dangkhoa2016/Qdrant-Native-Portable)](LICENSE)
+
 > 🌐 Language / Ngôn ngữ: [English](README.md) | **Tiếng Việt**
 
 Bộ công cụ Qdrant theo hướng bảo mật, **native-first và có Docker**, dành cho học tập, development, RAG demo, integration test và các deployment single-node theo hướng production. Native mode tự thích nghi với Google Colab, Kaggle, GitHub Codespaces, VM kiểu CodeSandbox và Linux thông thường; Docker runtime bổ sung adapter cho Hugging Face Spaces, Modal và Beam.
@@ -456,6 +460,16 @@ bash qdrant.sh security-check
 ```
 
 GitHub Actions là môi trường authoritative dự kiến để chạy ShellCheck cho public repository; môi trường local có thể không cài sẵn binary `shellcheck`.
+
+## Cộng đồng, hỗ trợ và bảo mật
+
+- Đọc [CONTRIBUTING.vi.md](CONTRIBUTING.vi.md) trước khi đề xuất thay đổi code hoặc tài liệu.
+- Dùng các GitHub issue form có cấu trúc cho bug có thể tái hiện, feature request tập trung và câu hỏi sử dụng.
+- Xem [hướng dẫn hỗ trợ](.github/SUPPORT.vi.md) để biết phạm vi hỗ trợ và thông tin cần cung cấp khi chẩn đoán.
+- Báo vulnerability nghi ngờ theo [SECURITY.vi.md](SECURITY.vi.md), không dùng public issue.
+- Việc tham gia các không gian của project tuân theo [Code of Conduct](.github/CODE_OF_CONDUCT.md).
+
+Ownership của các vùng critical được khai báo trong [`.github/CODEOWNERS`](.github/CODEOWNERS). Automated dependency maintenance được chủ động giới hạn ở GitHub Actions để mọi thay đổi baseline Qdrant/client vẫn phải qua compatibility validation rõ ràng.
 
 ## License
 

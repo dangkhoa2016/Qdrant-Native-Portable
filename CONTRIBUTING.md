@@ -2,20 +2,25 @@
 
 > 🌐 Language / Ngôn ngữ: **English** | [Tiếng Việt](CONTRIBUTING.vi.md)
 
-Contributions are welcome when they keep the project portable, understandable, and safe for public educational use.
+Contributions are welcome when they keep Qdrant Native Portable portable, understandable, security-conscious, and precise about what has actually been validated.
 
 ## Design principles
 
-- Keep Docker optional/outside the core: this repository demonstrates native Qdrant.
-- Preserve `current-user + minimal` rootless operation.
-- Do not make Colab/Codespaces/Kaggle assumptions part of the generic core when platform detection can isolate them.
-- Never commit real credentials, runtime URLs, snapshots, logs, `runtime.env`, or generated tokens.
+- Preserve the **native-first** core while keeping Docker and provider adapters as explicit, isolated deployment surfaces; Docker must not become a requirement for native workflows.
+- Preserve rootless `current-user + minimal` operation.
+- Keep Colab, Kaggle, Codespaces, generic Linux, Docker, and provider-specific assumptions behind clear platform/adapter boundaries.
+- Treat live database storage and completed snapshot persistence as different concerns; do not claim a provider storage backend is safe for live Qdrant files without evidence.
+- Never commit real credentials, private runtime URLs, snapshots containing private data, logs, `runtime.env`, `secrets.env`, or generated tokens.
 - Prefer environment-variable configuration and stable, documented defaults.
-- Keep EN/VI documentation synchronized when changing user-facing workflows.
+- Keep English and Vietnamese user-facing documentation synchronized.
+- Match validation claims to evidence: regression-tested, real-host validated, and real-provider validated are not interchangeable.
 
 ## Before opening a pull request
 
+Run the canonical source and static checks:
+
 ```bash
+python3 scripts/source-integrity.py check --root . --manifest SOURCE-MANIFEST.json --require-clean
 bash tests/static-checks.sh
 ```
 
@@ -27,18 +32,14 @@ bash qdrant.sh security-check
 bash qdrant.sh health
 ```
 
-For changes to resource profiles, include a reproducible benchmark command and the relevant host information from:
+For release packaging, source-integrity, or public-source changes, also run:
 
 ```bash
-bash qdrant.sh system-info
+bash tests/test-release-package.sh
 ```
 
-For native lifecycle, PID handling, readiness, or service-manager changes, run the focused public-entry-point regression test as well:
+For resource-profile changes, include a reproducible benchmark command and relevant host information from `bash qdrant.sh system-info`. For native lifecycle, PID handling, readiness, or service-manager changes, run `bash tests/test-start-readiness.sh` as well.
 
-```bash
-bash tests/test-start-readiness.sh
-```
+Provider-persistence changes should include the strongest evidence actually available for that provider and must preserve fail-closed restore/corruption behavior where documented.
 
-It covers an existing process that becomes ready after a delay, an early process exit, wall-clock timeout enforcement, hidden transient curl errors, and startup-timeout configuration precedence/persistence. Review lifecycle changes across `scripts/05_start_qdrant.sh`, the public dispatch path in `scripts/service-manager.sh`, and the shared readiness/config helpers in `scripts/common.sh`; a failure must remain non-zero through `bash qdrant.sh start`.
-
-Do not include revealed API keys or private data in benchmark logs/issues.
+Do not include revealed API keys, provider secrets, private URLs, or private data in tests, benchmark artifacts, issues, or pull requests.

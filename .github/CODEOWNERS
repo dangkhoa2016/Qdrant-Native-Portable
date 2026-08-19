@@ -1,0 +1,13 @@
+# Default repository ownership
+* @dangkhoa2016
+
+# Explicit ownership for project-critical areas
+/.github/ @dangkhoa2016
+/benchmarks/ @dangkhoa2016
+/deploy/ @dangkhoa2016
+/docker/ @dangkhoa2016
+/docs/ @dangkhoa2016
+/examples/ @dangkhoa2016
+/scripts/ @dangkhoa2016
+/tests/ @dangkhoa2016
+/qdrant.sh @dangkhoa2016

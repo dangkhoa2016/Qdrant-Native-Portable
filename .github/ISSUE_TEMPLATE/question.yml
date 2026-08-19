@@ -1,0 +1,41 @@
+name: Usage question
+description: Ask a focused question about configuring or using Qdrant Native Portable.
+title: "[Question]: "
+body:
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I checked the documentation and existing issues.
+          required: true
+        - label: I removed or sanitized sensitive information.
+          required: true
+  - type: input
+    id: version
+    attributes:
+      label: Project version or commit
+      placeholder: v1.0.0 or full/short commit SHA
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: Runtime or workflow
+      options: [Native, Docker, Hugging Face Spaces, Modal.com, Beam.cloud, Benchmark/tooling, Snapshot/backup/restore, Other]
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried?
+      description: Include relevant commands, non-secret configuration, and sanitized output.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment details
+      description: Include platform, Qdrant version, CPU/RAM, profile, process/deployment mode, and other relevant non-secret settings.

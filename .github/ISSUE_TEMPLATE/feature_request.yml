@@ -1,0 +1,45 @@
+name: Feature request
+description: Propose a focused improvement to Qdrant Native Portable.
+title: "[Feature]: "
+body:
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight
+      options:
+        - label: I searched existing issues and pull requests for a similar proposal.
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What user problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the observable behavior or workflow you want.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Potential impact
+      options:
+        - label: Native/rootless lifecycle or platform detection
+        - label: Docker or provider-adapter behavior
+        - label: Persistence, snapshot, restore, or durability
+        - label: Network exposure, credentials, authorization, or security boundaries
+        - label: Resource profiles or benchmark comparability
+        - label: Public CLI or documented workflow
+        - label: Release packaging, source manifest, or integrity behavior
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context

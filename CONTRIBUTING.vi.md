@@ -2,20 +2,25 @@
 
 > 🌐 Language / Ngôn ngữ: [English](CONTRIBUTING.md) | **Tiếng Việt**
 
-Đóng góp được hoan nghênh khi giữ project portable, dễ hiểu và an toàn cho mục đích giáo dục công khai.
+Đóng góp được hoan nghênh khi giúp Qdrant Native Portable giữ tính portable, dễ hiểu, chú trọng bảo mật và chính xác về phạm vi đã thực sự được validation.
 
 ## Nguyên tắc thiết kế
 
-- Giữ Docker là tùy chọn/ngoài core: repository này chứng minh Qdrant chạy native.
+- Giữ **native-first** làm core, đồng thời tách Docker và provider adapter thành các deployment surface rõ ràng; Docker không được trở thành yêu cầu bắt buộc cho native workflow.
 - Giữ nguyên hoạt động rootless `current-user + minimal`.
-- Không đưa giả định về Colab/Codespaces/Kaggle vào generic core khi platform detection có thể tách biệt chúng.
-- Không bao giờ commit credential thật, runtime URL, snapshot, log, `runtime.env` hoặc token được tạo.
+- Tách các giả định dành cho Colab, Kaggle, Codespaces, generic Linux, Docker và từng provider qua boundary platform/adapter rõ ràng.
+- Phân biệt live database storage với persistence của snapshot đã hoàn tất; không tuyên bố storage backend của provider an toàn cho live Qdrant files khi chưa có bằng chứng.
+- Không bao giờ commit credential thật, private runtime URL, snapshot chứa dữ liệu riêng tư, log, `runtime.env`, `secrets.env` hoặc token được tạo.
 - Ưu tiên cấu hình qua environment variable và default ổn định, có tài liệu.
-- Giữ tài liệu EN/VI đồng bộ khi thay đổi workflow hiển thị cho người dùng.
+- Giữ tài liệu hướng tới người dùng bằng English và Tiếng Việt đồng bộ.
+- Mức tuyên bố validation phải khớp bằng chứng: regression-tested, real-host validated và real-provider validated không thể dùng thay thế cho nhau.
 
 ## Trước khi mở pull request
 
+Chạy canonical source check và static checks:
+
 ```bash
+python3 scripts/source-integrity.py check --root . --manifest SOURCE-MANIFEST.json --require-clean
 bash tests/static-checks.sh
 ```
 
@@ -27,18 +32,14 @@ bash qdrant.sh security-check
 bash qdrant.sh health
 ```
 
-Đối với thay đổi resource profile, cung cấp lệnh benchmark có thể lặp lại và thông tin host liên quan từ:
+Với thay đổi liên quan release packaging, source integrity hoặc public source, chạy thêm:
 
 ```bash
-bash qdrant.sh system-info
+bash tests/test-release-package.sh
 ```
 
-Đối với thay đổi native lifecycle, PID handling, readiness hoặc service manager, chạy thêm regression test tập trung qua public entry point:
+Với thay đổi resource profile, hãy cung cấp benchmark command có thể tái lập và thông tin host từ `bash qdrant.sh system-info`. Với thay đổi native lifecycle, PID handling, readiness hoặc service manager, chạy thêm `bash tests/test-start-readiness.sh`.
 
-```bash
-bash tests/test-start-readiness.sh
-```
+Thay đổi provider persistence phải kèm mức bằng chứng mạnh nhất thực sự có cho provider đó và phải giữ hành vi restore/corruption fail-closed ở những nơi đã được tài liệu hóa.
 
-Test này bao phủ process hiện có trở nên ready sau một khoảng trễ, process thoát sớm, enforcement của wall-clock timeout, việc ẩn lỗi curl tạm thời và precedence/persistence của cấu hình startup timeout. Khi review thay đổi lifecycle, cần đối chiếu `scripts/05_start_qdrant.sh`, public dispatch path trong `scripts/service-manager.sh` và readiness/config helper dùng chung trong `scripts/common.sh`; failure phải giữ exit status non-zero xuyên suốt `bash qdrant.sh start`.
-
-Không đưa API key đã hiển thị hoặc dữ liệu riêng tư vào log/issue benchmark.
+Không đưa API key đã reveal, provider secret, private URL hoặc dữ liệu riêng tư vào test, benchmark artifact, issue hay pull request.

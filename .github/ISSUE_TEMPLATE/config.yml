@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security policy
+    url: https://github.com/dangkhoa2016/Qdrant-Native-Portable/security/policy
+    about: Report suspected vulnerabilities using the private guidance in the security policy, not a public issue.
+  - name: Documentation
+    url: https://github.com/dangkhoa2016/Qdrant-Native-Portable#readme
+    about: Review setup, platforms, security, persistence, benchmarking, and release guidance before opening an issue.
+  - name: Support guide
+    url: https://github.com/dangkhoa2016/Qdrant-Native-Portable/blob/main/.github/SUPPORT.md
+    about: Check what information to include and what sensitive data must be removed before requesting help.
