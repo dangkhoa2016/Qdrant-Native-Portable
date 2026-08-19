@@ -1,0 +1,32 @@
+name: CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+    - name: Checkout
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+    - name: Verify source manifest
+      run: |
+        if [[ -f SOURCE-MANIFEST.json ]]; then
+          python3 scripts/source-integrity.py check --root . --manifest SOURCE-MANIFEST.json --require-clean
+        else
+          echo "SOURCE-MANIFEST.json not present in this historical revision; skipping canonical manifest check"
+        fi
+    - name: Install static-check dependencies
+      run: sudo apt-get update -qq && sudo apt-get install -y -qq shellcheck ruby jq zip unzip
+    - name: Run checks
+      run: bash tests/static-checks.sh
+  non-git-packaging-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    name: Non-Git packaging smoke
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+    - name: Run true non-Git packaging smoke
+      run: bash tests/test-release-package.sh
