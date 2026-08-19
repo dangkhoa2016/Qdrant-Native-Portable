@@ -1,0 +1,957 @@
+{
+  "schema_version": 2,
+  "scope": "project-source-v2",
+  "root_name": "qdrant-native-portable-v1.0.0",
+  "canonical_sha256": "2434ea7b9d0455599f31d61080f90afc209d92eed950b0042941507b537e5413",
+  "canonical_file_count": 158,
+  "files": [
+    {
+      "path": ".beamignore",
+      "sha256": "a6a26d4750bf992c9a86db5cb5843ddbe8773e3a3d1fad9e5f8c505f7a72d34a",
+      "size": 254,
+      "kind": "file"
+    },
+    {
+      "path": ".dockerignore",
+      "sha256": "a7fb818a0eb0ba012fe4887b02930bcc25870a519acfd6c4f32d7813974ccc47",
+      "size": 225,
+      "kind": "file"
+    },
+    {
+      "path": ".editorconfig",
+      "sha256": "e74e511d97036b0f0e74af747a404ce20c91066ca17906da67b2b80267a3af9c",
+      "size": 225,
+      "kind": "file"
+    },
+    {
+      "path": ".env.example",
+      "sha256": "b7e6d0257f7605bce415d56185e58c15676dfeac1d9ed04f6a2122afbf3666bd",
+      "size": 2085,
+      "kind": "file"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "3af65450dc0df04c7b8da52b72870324d973422a314fbaa29e9034d2cf6a87a9",
+      "size": 191,
+      "kind": "file"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "e463e71be212a73fab8e1f62143b0f2fb0facf534101cb9fdcc40df77313046e",
+      "size": 713,
+      "kind": "file"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "c033527d37e4468ddba5ac16882d3bc34b225eb276f8bf0dadce74bb7f69d11a",
+      "size": 5973,
+      "kind": "file"
+    },
+    {
+      "path": "CHANGELOG.vi.md",
+      "sha256": "3bfac2e2f2de3337eee497c8c4835e3b7858191d8b11c11dc4c006af4aa2f822",
+      "size": 6551,
+      "kind": "file"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "56ad843ebd256ea9797aa6d87acbc6422c5e6ef9ccd4c3a09dd996afd3b1e947",
+      "size": 1197,
+      "kind": "file"
+    },
+    {
+      "path": "CONTRIBUTING.vi.md",
+      "sha256": "14da70b12a843dbd3c62882dae95bdbc360bb2f8e8f1ecd3c0bca46ffb8c5cef",
+      "size": 1345,
+      "kind": "file"
+    },
+    {
+      "path": "Dockerfile",
+      "sha256": "ba95b4c21f064cd83e7e4a9ab728037f6b21720a564e49edd8f9460d3d620bbe",
+      "size": 908,
+      "kind": "file"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "517d97cfdfecbac55fda6af3f7f955c142a43f47a6f2213304425af4cfd1a1b2",
+      "size": 1088,
+      "kind": "file"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d0a2df329705c33158169c1f51c9ad8774bb63783e1aa4f9433c5a2389404ccb",
+      "size": 22252,
+      "kind": "file"
+    },
+    {
+      "path": "README.vi.md",
+      "sha256": "16807e6b85bd6b56e21cbe8ac6724af59d9fede005f7013426137c442025a43e",
+      "size": 23833,
+      "kind": "file"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "9c0829db5bc6fc67418fa5b4d947169217ddd704826f516a2fa2740a4f956764",
+      "size": 940,
+      "kind": "file"
+    },
+    {
+      "path": "SECURITY.vi.md",
+      "sha256": "5b85ac5628ee3570763158545161fb5ec000acc897b8098c9db8c00abe8f8369",
+      "size": 1084,
+      "kind": "file"
+    },
+    {
+      "path": "VERSION",
+      "sha256": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03",
+      "size": 6,
+      "kind": "file"
+    },
+    {
+      "path": "qdrant.sh",
+      "sha256": "d76f639715232b603d28451d7608f5da88ec6a886736cd410c4eda24f973333e",
+      "size": 3707,
+      "kind": "file"
+    },
+    {
+      "path": "run-fresh-qdrant-benchmarks.sh",
+      "sha256": "e6a3c87444b5868508fd365be27e831fb69c875659aa095d3fdba2c9fd2457c1",
+      "size": 3146,
+      "kind": "file"
+    },
+    {
+      "path": "run-smart-qdrant-benchmarks.sh",
+      "sha256": "d94810d78ea892e151a1829b120f0c34a3fa8bc6586671dace631eabca6460ee",
+      "size": 18620,
+      "kind": "file"
+    },
+    {
+      "path": "run_all.sh",
+      "sha256": "2c0c2407b4ed854f6a25cd7c94ac939731649a83792587083d7c897ceea1c9ab",
+      "size": 1757,
+      "kind": "file"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "a7010656f6fcce3fefa4cda5b84b722128f87101180b141becca3fa461ab7bc4",
+      "size": 1089,
+      "kind": "file"
+    },
+    {
+      "path": "benchmarks/README.md",
+      "sha256": "16ad315d81fc5ce24f1c147453a258a6b81d23fa178828971020a15f5b063a83",
+      "size": 7279,
+      "kind": "file"
+    },
+    {
+      "path": "benchmarks/README.vi.md",
+      "sha256": "1771c73a416edec8608d0ac73fa1123acbc79a45d5033980280b9030fc6eb7fe",
+      "size": 7413,
+      "kind": "file"
+    },
+    {
+      "path": "benchmarks/acceptance.py",
+      "sha256": "2ce1b2eb8a828c4235bf1dbe782e944391decc8d149a49f73fe6f25f9995a8c9",
+      "size": 10473,
+      "kind": "file"
+    },
+    {
+      "path": "benchmarks/benchmark.py",
+      "sha256": "f9264ac12b7e90e67ccd03da2ac1c8eb51f65bbcc496e343375e0395b5f34254",
+      "size": 28071,
+      "kind": "file"
+    },
+    {
+      "path": "benchmarks/compare_runs.py",
+      "sha256": "fd01e234860c59ea69a1db3504e7cc574efc90c7d40a5aab46f76ae3e1bafe4a",
+      "size": 10336,
+      "kind": "file"
+    },
+    {
+      "path": "benchmarks/profile_compare.py",
+      "sha256": "5caf8d550e3760bc30519e55d35b82504cae6b4931ffc2ca26f0a6a772876c98",
+      "size": 7750,
+      "kind": "file"
+    },
+    {
+      "path": "benchmarks/report.py",
+      "sha256": "f9a33c89ad94e547db4df6cdd2cb5e779a8a4fcccd59828ac095f5cd7e23f0ab",
+      "size": 7837,
+      "kind": "file"
+    },
+    {
+      "path": "benchmarks/resource_summary.py",
+      "sha256": "ad7690c2c2e128bafc0ff4435fb6c4bbc00dd4887f993cbd56f483f46790e66b",
+      "size": 14873,
+      "kind": "file"
+    },
+    {
+      "path": "benchmarks/status.py",
+      "sha256": "c514332eabefe7a5a835cd0aa900feae5928e22b5cdc474801c06ac572e78eca",
+      "size": 6582,
+      "kind": "file"
+    },
+    {
+      "path": "deploy/beam/app.py",
+      "sha256": "288294d43943228f721a4eaad3ddf31207a68efb87e3eead421d4aa7123b737e",
+      "size": 1763,
+      "kind": "file"
+    },
+    {
+      "path": "deploy/beam/entrypoint.sh",
+      "sha256": "e22f51e13580b826f1be220dc5180c9e14271de8f92e7ba5934ffb3c6df1d08c",
+      "size": 1648,
+      "kind": "file"
+    },
+    {
+      "path": "deploy/huggingface-spaces/README.template.md",
+      "sha256": "8e818ac67390ec71a9036d67e9f0bf70d94487c3cbce8c067c116ba3b52e1318",
+      "size": 3079,
+      "kind": "file"
+    },
+    {
+      "path": "deploy/modal/app.py",
+      "sha256": "4cc4a59408197301ad0f16d487c5d8b46e9e206a58b64153e9cd233340f6344a",
+      "size": 9481,
+      "kind": "file"
+    },
+    {
+      "path": "docker/.dockerignore",
+      "sha256": "8a8ffcf6b5c432860d1e17a2addaf47224207d1c6d3121b104a59a508fe07cc0",
+      "size": 76,
+      "kind": "file"
+    },
+    {
+      "path": "docker/Dockerfile",
+      "sha256": "b535a28e7b9f9553c2d855304ba66e582153cf33fd01010d894415ff54c0e0a5",
+      "size": 988,
+      "kind": "file"
+    },
+    {
+      "path": "docker/docker-compose.yml",
+      "sha256": "0991d508855c017eededfef847a635f6a6d7ab8d21603462c4b13a0fddbe9da5",
+      "size": 1258,
+      "kind": "file"
+    },
+    {
+      "path": "docker/entrypoint.sh",
+      "sha256": "87fdec7a9392f590a996f851c4c2bbb0fb461a6a31a7ae4fa929476af7acd191",
+      "size": 6644,
+      "kind": "file"
+    },
+    {
+      "path": "docker/healthcheck.sh",
+      "sha256": "85121b1f4562f5dba29503ca2c931f843c25d96b1f4d8f273ef4a16e3570f7c9",
+      "size": 293,
+      "kind": "file"
+    },
+    {
+      "path": "docker/persistence.sh",
+      "sha256": "962e9e9e20d2f6072de59579c7019b9fc0991b5722a5f16a8a63ad349acdd137",
+      "size": 11477,
+      "kind": "file"
+    },
+    {
+      "path": "docs/FEATURES.md",
+      "sha256": "36e1c112f05c389873f322c20fca3ffe8c46e749644561c9852555aa245831a8",
+      "size": 12382,
+      "kind": "file"
+    },
+    {
+      "path": "docs/FEATURES.vi.md",
+      "sha256": "bf26a05d853e8d9db9d7e23d3e36df842925613977e7a9cea369a77bf7164898",
+      "size": 13153,
+      "kind": "file"
+    },
+    {
+      "path": "docs/PLATFORMS.md",
+      "sha256": "e001ee61f02eb08a2a1e57c8dce1e7eebf9d58ae8941ff451c09ea48869e0356",
+      "size": 3815,
+      "kind": "file"
+    },
+    {
+      "path": "docs/PLATFORMS.vi.md",
+      "sha256": "f60d5c81f444e819826c4334f367b9a77386e1f59db0d41bd72678b65ef68649",
+      "size": 3903,
+      "kind": "file"
+    },
+    {
+      "path": "docs/PRODUCTION.md",
+      "sha256": "1d0c3dd0248777266814bcd9650235249b697019c86ada1f5c7756a9b66526fe",
+      "size": 12800,
+      "kind": "file"
+    },
+    {
+      "path": "docs/PRODUCTION.vi.md",
+      "sha256": "f0d0ed5859e0f893f586320f51a4c18a788d83f74565c794332e9583e8d77bbe",
+      "size": 13446,
+      "kind": "file"
+    },
+    {
+      "path": "docs/PROFILE-ADVISOR.md",
+      "sha256": "db68dff73eb2b5dce1ffdcdea8cb8fa1bb918401909056c18205df019b008cbc",
+      "size": 1558,
+      "kind": "file"
+    },
+    {
+      "path": "docs/PROFILE-ADVISOR.vi.md",
+      "sha256": "b75eb28efed3028002457509f320b5534b0344562ae1ee1996c4c859da1ee72a",
+      "size": 1662,
+      "kind": "file"
+    },
+    {
+      "path": "docs/PROFILES.md",
+      "sha256": "aa55af76a9b95a4947da17cd39e51c868d95870f749ffcd0f50c7b00db113587",
+      "size": 3634,
+      "kind": "file"
+    },
+    {
+      "path": "docs/PROFILES.vi.md",
+      "sha256": "870ad1d9aa8fe3e3e7dedecaa51f59fa747031ff678cb022a4c0f8cda76f38d4",
+      "size": 3682,
+      "kind": "file"
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "c1c7f471efb96b97b406a1ccec66f22098ff80b3e5dd9e423a01a0c90a38aa4c",
+      "size": 1316,
+      "kind": "file"
+    },
+    {
+      "path": "docs/README.vi.md",
+      "sha256": "decb552494a8e3a18964a0151d7cfa9dcf0240b723211d700de504a83fdfc8a9",
+      "size": 1455,
+      "kind": "file"
+    },
+    {
+      "path": "docs/RESET-REINSTALL.md",
+      "sha256": "e65b1a35c0f94d435d34e0ed09cc0a7052039454e4fe346151649472f2a3266e",
+      "size": 4558,
+      "kind": "file"
+    },
+    {
+      "path": "docs/RESET-REINSTALL.vi.md",
+      "sha256": "e48ea28f3693265730a3afd290b3bde10ac0fc97913a1eff23a37960464cc93e",
+      "size": 4793,
+      "kind": "file"
+    },
+    {
+      "path": "docs/SECURITY.md",
+      "sha256": "01d1bd2cd7681c93521722bfcd58d87842e99fda1d7944f9b9bc041155b6c455",
+      "size": 6066,
+      "kind": "file"
+    },
+    {
+      "path": "docs/SECURITY.vi.md",
+      "sha256": "9d8c6b01156bb6ea3adeb6113f979880bd30c2800a28638550af4fd680491674",
+      "size": 5885,
+      "kind": "file"
+    },
+    {
+      "path": "docs/SNAPSHOTS.md",
+      "sha256": "b02b227c98c02fb0b8f795dd31f8a14ec9869a70b6f5688c134dd3e93abb525e",
+      "size": 3691,
+      "kind": "file"
+    },
+    {
+      "path": "docs/SNAPSHOTS.vi.md",
+      "sha256": "7a6b4034d28c151a19e48f37ef097dc1b0932e6984e369701e3406380dce7a33",
+      "size": 3740,
+      "kind": "file"
+    },
+    {
+      "path": "docs/USAGE.md",
+      "sha256": "07f8a0a226252a16ff06fdc845ee83295c02058ca4ed4275c33364aaf181e5e5",
+      "size": 6998,
+      "kind": "file"
+    },
+    {
+      "path": "docs/USAGE.vi.md",
+      "sha256": "a914dc97761d5ee8bba106b184ff8059d7f89f44d68935cb990abe8253500524",
+      "size": 7204,
+      "kind": "file"
+    },
+    {
+      "path": "examples/README.md",
+      "sha256": "a3762482353fe6dd215413869539dfbd5b2587f3be30e895a7eade0c53be1fc5",
+      "size": 2048,
+      "kind": "file"
+    },
+    {
+      "path": "examples/README.vi.md",
+      "sha256": "05abe244ecf2f780c342ae1c984ae5147234a0ca52f42557651114979ccbd8be",
+      "size": 2065,
+      "kind": "file"
+    },
+    {
+      "path": "examples/run_examples.sh",
+      "sha256": "7a7e680a3feafd4fe3d3dab77ba041609ff797fbb406ea95ca5db111be593f78",
+      "size": 1067,
+      "kind": "file"
+    },
+    {
+      "path": "examples/curl/basic.sh",
+      "sha256": "2b68fe012bc784af5f519f506ede6d59503845058900bf713eddc26fe2b1bdca",
+      "size": 1527,
+      "kind": "file"
+    },
+    {
+      "path": "examples/node/client.js",
+      "sha256": "e10820c3f0f0bbd90afc3b1f368375e12854b166361675251c71a316e16377b1",
+      "size": 1522,
+      "kind": "file"
+    },
+    {
+      "path": "examples/node/package.json",
+      "sha256": "f4c7b0f9356e86b05c0c8cd06cc15a6763651a2d2d7d7483b05d1144bc04093f",
+      "size": 330,
+      "kind": "file"
+    },
+    {
+      "path": "examples/production/beam-sentinel.sh",
+      "sha256": "58dee050e4d6553e7540f19414d2afacddf0d8bd4b285aa4e89d6f8457792a2c",
+      "size": 5443,
+      "kind": "file"
+    },
+    {
+      "path": "examples/production/collect-beam-validation-result.sh",
+      "sha256": "50ec3d2f300ceb8e30218f93d2d9fa247bb9248a6b41c91543fadd0d86b6f4a0",
+      "size": 6870,
+      "kind": "file"
+    },
+    {
+      "path": "examples/production/collect-modal-validation-result.sh",
+      "sha256": "00f56aa8e513bc8f8cd54aaf5bbe4d04151293a0b446ad4188846ff307bf19cd",
+      "size": 3906,
+      "kind": "file"
+    },
+    {
+      "path": "examples/production/production-beam.cloud-example.sh",
+      "sha256": "4d7fb227d1e4449e2f5ae1fdbb7040bfc9271b7211f5584f910e4ff4c4a2f055",
+      "size": 3819,
+      "kind": "file"
+    },
+    {
+      "path": "examples/production/production-docker-single-example.sh",
+      "sha256": "9097d43425749ed32e07bda9bdcb77131e471d3f0eed08d1fa3d395e1bc412fe",
+      "size": 335,
+      "kind": "file"
+    },
+    {
+      "path": "examples/production/production-generic-linux-example.sh",
+      "sha256": "659cf398e97046c45516723d323d6939b60ab5badc1fc66c9f5f808640a17334",
+      "size": 474,
+      "kind": "file"
+    },
+    {
+      "path": "examples/production/production-github-codespaces-example.sh",
+      "sha256": "659cf398e97046c45516723d323d6939b60ab5badc1fc66c9f5f808640a17334",
+      "size": 474,
+      "kind": "file"
+    },
+    {
+      "path": "examples/production/production-google-colab-example.sh",
+      "sha256": "659cf398e97046c45516723d323d6939b60ab5badc1fc66c9f5f808640a17334",
+      "size": 474,
+      "kind": "file"
+    },
+    {
+      "path": "examples/production/production-huggingface-spaces-example.sh",
+      "sha256": "68e0d2d5cffbb6ecd5041a2d6921fbe3ffec2ca78a3cebaf0963aee78033b8a1",
+      "size": 1152,
+      "kind": "file"
+    },
+    {
+      "path": "examples/production/production-kaggle-example.sh",
+      "sha256": "502a8d225e398796af3c9330a533cb816ff7cd8c9bd970cc7019674590cff7ab",
+      "size": 538,
+      "kind": "file"
+    },
+    {
+      "path": "examples/production/production-modal.com-example.sh",
+      "sha256": "85b41216156d4c6ca524be5bfd78e3669e8805d6c777427c826d17a4ee5e3000",
+      "size": 1577,
+      "kind": "file"
+    },
+    {
+      "path": "examples/python/requirements.txt",
+      "sha256": "7aaadb3319cb0ff298d7a42d8dfa2c6a545fcccbfe633ce5912d1315ef3934c3",
+      "size": 41,
+      "kind": "file"
+    },
+    {
+      "path": "examples/python/rest_client.py",
+      "sha256": "104a3c184da7cf97e90f7a81a191ada5f668de1fb0da8c2712564bc1fc7d46d4",
+      "size": 2445,
+      "kind": "file"
+    },
+    {
+      "path": "examples/python/sdk_client.py",
+      "sha256": "f73be23564c65975096ddb4a0b4513638ecbdb70120797baed554a710b8afd2b",
+      "size": 1822,
+      "kind": "file"
+    },
+    {
+      "path": "examples/ruby/client.rb",
+      "sha256": "1765bff8a11afecb0b39ef05b07455dcb8b4e7e56f36e039fecf346baa50c949",
+      "size": 2011,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/01_credentials.sh",
+      "sha256": "61f7da65b4527e19b9748c4776eaf072a23d51390a1d12d20f0cb34f6594334f",
+      "size": 2559,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/02_setup_env.sh",
+      "sha256": "36a7904d5fe3b04eafab84a42af066da3ffc129477ce3e0c00494e525ff88425",
+      "size": 3263,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/03_download_qdrant.sh",
+      "sha256": "0e7fe6abe8413e1ad916406c2b2297531cdb4594785247075e55979f285ea7c7",
+      "size": 1193,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/04_configure_qdrant.sh",
+      "sha256": "2573c965222fcc82267b5fb203087ca8770698418b5589e9cb84cb5a00528c51",
+      "size": 3493,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/05_start_qdrant.sh",
+      "sha256": "3883bc51d5e2cb25738ba1d2749272451d3c6ea54aab279d1f5577abee9a14bf",
+      "size": 711,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/06_verify_qdrant.sh",
+      "sha256": "d8da5391fd1dd48d654ec14f2b0ba64370330011570eec7769e030803e90c03c",
+      "size": 1885,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/07_demo_data.sh",
+      "sha256": "a30b525b97c3bce9f78e4a177ee0baa99e1fc9904c148bcc86f174484ab8ed07",
+      "size": 1647,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/08_setup_proxy.sh",
+      "sha256": "db8811736c1fef275d8f311781fb91864f73ced637599e2ce270070958e483e8",
+      "size": 1419,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/09_health_check.sh",
+      "sha256": "4d752bb7176f94496f3a68f6d6bad7d145862383bb9257a8e75fd9e27a2a55c0",
+      "size": 2035,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/10_start_tunnel.sh",
+      "sha256": "af6bcc83d011e9ca50ee0ced619d04b1679d621db9253a687b77ec839f2650e1",
+      "size": 1752,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/activate.sh",
+      "sha256": "9907d401f55e625070a708adaf8c7f333e2cf41b9ce71f3ea36eab946a5717a2",
+      "size": 1012,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/auth-check.sh",
+      "sha256": "2753ddc778df0f225f7da3f7b852f8f103382a23ef436987b997208a45f873f3",
+      "size": 1803,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/backup-manager.sh",
+      "sha256": "dbc9a3e1adc5ce1d6502c9007f2ea242dfa13e5172c15d72d61f6756a2eae6ae",
+      "size": 2272,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/benchmark-acceptance.sh",
+      "sha256": "5a26bfdb72253341d3b5d9019ca261f6d1293c94507ea9786bab25ae7cf5d4b3",
+      "size": 144,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/benchmark-profiles.sh",
+      "sha256": "c9010d28b2321beb92dbf772c2f68e9ecf26ecc35896be2769d605942d24d431",
+      "size": 8879,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/benchmark-status.sh",
+      "sha256": "d3ba8622d0ded0b32fb3144d2d675351f3bc24b9fa7dc714b0452a37551f7b9d",
+      "size": 140,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/benchmark-suite.sh",
+      "sha256": "b2a47afcf883dfdd57c00793b95290943359f6b078ef1e0ad22dfb7c95daf8e7",
+      "size": 5842,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/benchmark.sh",
+      "sha256": "245da6d463d0a1195bc0fdac5750224fc14cdc9d89b721b6140b15528955e8ef",
+      "size": 843,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/cleanup.sh",
+      "sha256": "b585e9d4f6860a8b1026c983d1d1f0936abc487a0fcb94639cae8c6612c3e195",
+      "size": 382,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/common.sh",
+      "sha256": "7a7aa0a0e17817a2b0ac419e9ee2c39f3a49e7a5f541a55247aa5c5ae3306471",
+      "size": 27772,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/compare-benchmarks.sh",
+      "sha256": "2eabd0814ed475f77bd63dabd940cd06028cc9905738ce5fab744be85889f37f",
+      "size": 146,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/credentials-manager.sh",
+      "sha256": "b666b9b340d37cab443b355c4fc95e04cdc3abd74bd65194a6dffaf7771b7779",
+      "size": 5308,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/doctor.sh",
+      "sha256": "4eda1542152d8072c89fab7158cc443db16b9b00c5b5119e2e4641c7c38cfe07",
+      "size": 3349,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/jwt-token.py",
+      "sha256": "523633c3348e6fb58cf1ead8a1c92690843ab3e6f00d837fb6bf4aef2459ad2f",
+      "size": 1693,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/metrics.sh",
+      "sha256": "b4b34a5112558a88e7984382ec51823bec0bedb16153aa236a7114fed6bfa564",
+      "size": 928,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/package-release.sh",
+      "sha256": "67d61d8e802928f1909a2018b5507a9b25c2344a94bfaaa9eb7e7fd783da237c",
+      "size": 8707,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/production-check.sh",
+      "sha256": "5851f62157a2f679148e3803c0aa471878ddcb8a4433041fbf5ca1a25868cda3",
+      "size": 2655,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/production-prepare.sh",
+      "sha256": "7272ce5b3321f52a40ef56cc8ebf8d354a08c1cfa270e9565a5019f35ee59be5",
+      "size": 895,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/production-serve.sh",
+      "sha256": "41c10cad4ffce4b278b76fc7b96fb8f69a92eb43e3725ff4f3a5df6ce0b23cf2",
+      "size": 1614,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/profile-advisor.sh",
+      "sha256": "029d6477a9a5cd7764a067a2ffaaac25711c3bdcdb542ac44ac357307a3af806",
+      "size": 6579,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/public-access.sh",
+      "sha256": "5b7b9a500688bdc2f70896da826956864cff795bf5132fbf244ecc5d40f47d0b",
+      "size": 2387,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/purge-all-test.sh",
+      "sha256": "74f94b70f617d62e7a094d676f65976d1ba6beb15fe33343271f5ef8676e0037",
+      "size": 11802,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/reinstall-test.sh",
+      "sha256": "926f9f829cfbc4bd0db25d558fd480c1daea3894aec480059cd60275b2f89d5c",
+      "size": 5100,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/resource-monitor.sh",
+      "sha256": "1962419c327ce2ccd1f0029fd88a5fed2f09e1fd8a0a5c3f269f005b02d52418",
+      "size": 5619,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/security-check.sh",
+      "sha256": "1c8822550efa6c0736b2d776c38bafd2e5028cc695c9ba13e7b8e493ff1361c6",
+      "size": 1597,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/service-manager.sh",
+      "sha256": "5628f9ef580032174de8ee1055c11a29f96b222bc1e9794ad9014200267c083c",
+      "size": 3313,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/show_credentials.sh",
+      "sha256": "b4bfcf1597b9b4bed0b7bfa772cbe2b5ff7f6cd4eeabf1c44138678ea7d2734e",
+      "size": 1001,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/snapshot-manager.sh",
+      "sha256": "752efdf10854ee274da643f93f1b1deecb07a272f7223ed209f9ed6f75a1e9cf",
+      "size": 6034,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/source-integrity.py",
+      "sha256": "64871f3671273dda010cde79bef9446419c9029de29c61085894ca5804887793",
+      "size": 20460,
+      "kind": "file"
+    },
+    {
+      "path": "scripts/system-info.sh",
+      "sha256": "a232ccbc8a7460d739fd43c5c628092a2cf6c6cb5be0ffdac2abebc4271090af",
+      "size": 2066,
+      "kind": "file"
+    },
+    {
+      "path": "tests/hf-sentinel-prepare.sh",
+      "sha256": "d10e8dfdc31ad53208ee8cb662df4ce91e592c70fb91a8e6f34ebae12c6bc3a8",
+      "size": 1589,
+      "kind": "file"
+    },
+    {
+      "path": "tests/hf-sentinel-verify-readonly.sh",
+      "sha256": "18a808e5882893bd9643f91acf1da1b7b14f9ee29e6123d2d00a2704771c17b8",
+      "size": 1364,
+      "kind": "file"
+    },
+    {
+      "path": "tests/static-checks.sh",
+      "sha256": "0b19585b7cbbc0a5e7267d458a5e568aefc4ad972e72f665ef1bb3c2ded1a2e1",
+      "size": 6322,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-auth-check.sh",
+      "sha256": "aa45c79721aad186bdff4832af0883dbbce0fc74f71517074014740884a86f75",
+      "size": 2178,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-beam-persistence-adapter.sh",
+      "sha256": "2f18249028380409b5f2b13f5dec498ddcfc87ae262a37390c6f01cfa2cd82b0",
+      "size": 6641,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-beam-result-hygiene.sh",
+      "sha256": "a3726edab079ab1b75023e1921a8f5b12600a91348a00d1a07fc63c8a9fb07ad",
+      "size": 6057,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-benchmark-acceptance.sh",
+      "sha256": "e3d3db878981716d10898dae4bbc4f78a1ad0f777cdd49468f1dc2e923c970a8",
+      "size": 5625,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-benchmark-settle.py",
+      "sha256": "2bc99ecb46e2e923157d29e6df0e74a75c2ebf3dffc82c968ad36ce7c5766097",
+      "size": 2799,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-benchmark-status.sh",
+      "sha256": "0ca50e304d1ed61146763ae7a269ab1cdd04ee39716b55d3cd0120f1020b10ca",
+      "size": 6100,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-benchmark-tooling.sh",
+      "sha256": "6782ed03f66ab8f6ff06893a893e406cc05f6b12c7bee05a0f79cde8d3eadf8e",
+      "size": 5401,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-compare-benchmarks.sh",
+      "sha256": "f2aa49d01dc5e68389b4a2965aec15dbeb05efc4a8d880701bbe4c00bf2d96f3",
+      "size": 3037,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-docker-persistence-entrypoint.sh",
+      "sha256": "4f5f46cbed07f877d90c0ff35d027467a575216400705be6f6bb6587c2f58071",
+      "size": 6318,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-docker-production.sh",
+      "sha256": "f369e50d48714bf24a2a4398d80de2a0ffd9d555f50b7d94162c56ce2be5800b",
+      "size": 3187,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-health-check-exit.sh",
+      "sha256": "cc0c4c3613228a8f1277ad5641cc5e314bc70acc96c1a09ac62b02c1d0aa2351",
+      "size": 2582,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-hf-bucket-persistence.sh",
+      "sha256": "91a2fa8e7a76f95a682c84369a417b8c7289da7ec9345085e3e7d68d797e9a00",
+      "size": 7636,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-hf-sentinel-tools.sh",
+      "sha256": "8fe779f09d52ee5cf25ec0e0b490c430fd6e7f051ef4ced34f7ad1207b10409a",
+      "size": 1424,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-jwt-token.sh",
+      "sha256": "811cab2bea8e4b01a296f3275e8a606020fc6360d4061a6e7c9773fbb770e0d9",
+      "size": 997,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-modal-persistence-adapter.sh",
+      "sha256": "f3eca8bc0ecb60e7d6cbb24f5057eff81222f781afccdd0c2ba3f811aa736618",
+      "size": 5389,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-modal-result-hygiene.sh",
+      "sha256": "2961fd42595e27a999d5d005eea717709771f669653a144c5d922cfb0220496b",
+      "size": 4767,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-portable-modes.sh",
+      "sha256": "4ac26e1c99f7d776bfbf71629a0e09f44f8b56997ddf4a679b7c0f9cb60fefb3",
+      "size": 5697,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-production-lifecycle.sh",
+      "sha256": "dd91f3128ac595d8ef7151aa5ac421111eb1f7119e75041d3461adeed8464e78",
+      "size": 840,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-production-mode.sh",
+      "sha256": "cad7dae34685334297db18dff48d542eb5467f95f409475cd9a8a23007b2b4c2",
+      "size": 9328,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-production-providers.sh",
+      "sha256": "99f17b5522d6dcc4a355ca63a7f1cadc99d1dd9a59c8df424a026614abaac70c",
+      "size": 11723,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-profile-advisor.sh",
+      "sha256": "18e53a05174f1170b6f707f31dd3a38c8e41d7d0aff227645e014884979aa4ee",
+      "size": 2339,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-profile-compare.sh",
+      "sha256": "1f49ae975dfdceb98edc3ef3aebaf2b48bbd01954855d771d19a2536d8ae77c9",
+      "size": 4521,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-public-release-readiness.sh",
+      "sha256": "58d683bf1bab85166ae0313a611bc0480822070318aea5ada686373d00d64c1b",
+      "size": 3703,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-purge-all-test.sh",
+      "sha256": "939a651ddaf9415a9585e4537fc7c01a375aa6f2e9b7857bf49ff318914e1d46",
+      "size": 3585,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-readiness-child-exit.sh",
+      "sha256": "6ee2ef3a8d80f31284d2af82ef0c3c41ee521d5d3bb40b30e358d232536f0449",
+      "size": 1561,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-reinstall-test.sh",
+      "sha256": "401fa8d792a0e7cc7b4d442f19b9b8bc73f6a23f65bced83b6b1771692728111",
+      "size": 3394,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-release-package.sh",
+      "sha256": "609cfcff7cf28463fc6223a71a8ecef821e3f9b9837d1ce1cd2cc5a70033e071",
+      "size": 16004,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-resource-monitor.sh",
+      "sha256": "ec57d655a45c4232b95adee357f3badfab0eae4520b68ba8a00951de8ee05c06",
+      "size": 9178,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-run-fresh-benchmark-wrapper.sh",
+      "sha256": "d18add8c524acb1903915293f6cda3fb859047f7ba966943fe47b798f74f900c",
+      "size": 1304,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-secret-precedence.sh",
+      "sha256": "baf732fffc38b88df1a697ec2ec5c5fb4580225f3ce44d4ecb1e299376e0d6b7",
+      "size": 699,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-smart-benchmark-wrapper.sh",
+      "sha256": "b970cbde8d16cfceaba629359fc9124b55dfbf9dbd6166b6cd98a9487deba5e7",
+      "size": 2115,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-snapshot-restore-temp-path.sh",
+      "sha256": "62247d68975d26dfe33de31809d3407b349fe31c0762021888147487c09d86ca",
+      "size": 1742,
+      "kind": "file"
+    },
+    {
+      "path": "tests/test-source-fingerprint.sh",
+      "sha256": "afcd9cd07526026d18d04bb5d4b34aa0eeddf65ce2a63e6dc873606632f12288",
+      "size": 19237,
+      "kind": "file"
+    }
+  ]
+}
